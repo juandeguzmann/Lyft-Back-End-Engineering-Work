@@ -7,7 +7,7 @@ class OctoprimeTires(Tires):
     def needs_service(self):
         dead_tires = 0
         for i in range(len(self.__tires)):
-            sum += self.__tires[i]
+            dead_tires += self.__tires[i]
         if dead_tires >= 3:
             return True
         else:
