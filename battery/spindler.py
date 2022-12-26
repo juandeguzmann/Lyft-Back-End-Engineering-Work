@@ -8,4 +8,5 @@ class SpindlerBattery(Battery):
     
     def needs_service(self):
         time_difference = self.__current_date - self.__last_service_date
-        return (time_difference.days//365) >= 2
+        return (time_difference.days//365) >= 3
+
