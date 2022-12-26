@@ -3,8 +3,11 @@ from battery.spindler_battery import SpindlerBattery
 import datetime as dt
 import unittest
 
-class NubbinBattery(unittest.TestCase):
-    def test_if_should_be_serviced(self):
+class NubbinBatteryTest(unittest.TestCase):
+    def test_if_battery_should_be_serviced(self):
         today = dt.datetime.today()
-        last_service_date = today.replace(year=today.year - 3)
-        nb = NubbinBattery(last_service_date, today)
+        last_service_date = today.replace(year=today.year - 4)
+        nb = NubbinBattery(today, last_service_date)
+        self.assertTrue(nb.needs_service())
+
+unittest.main()
