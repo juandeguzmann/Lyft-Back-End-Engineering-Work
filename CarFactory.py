@@ -5,6 +5,9 @@ from engine.sternman_engine import SternmanEngine
 from engine.willoughby_engine import WilloughbyEngine
 from car import Car
 
+from engine.engine import Engine
+from battery.battery import Battery
+
 import datetime as dt
 
 class CarFactory():
