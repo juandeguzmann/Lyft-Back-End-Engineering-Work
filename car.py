@@ -8,4 +8,4 @@ class Car(Serviceable):
         self.__engine = engine
     
     def needs_service(self):
-        print(f"Engine: {self.__engine.needs_service()}.\nBattery: {self.__battery.needs_service()}")
+        return self.__engine.needs_service() or self.__battery.needs_service()
